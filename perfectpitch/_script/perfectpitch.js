@@ -18,7 +18,7 @@ function generatePianos () {
 			newWhiteKey.classList.add('white');
 			newWhiteKey.style.gridColumn = `${1+(3*i)} / ${4+(3*i)}`;
 			newWhiteNote.classList.add('note-name');
-			newWhiteNote.textContent = `${String.fromCharCode(65+((i+2)%7))}${startingOctave+h}`;
+			newWhiteNote.textContent = `${String.fromCharCode(65+((i+2)%7))}${startingOctave+h}`; // for Example "C3"
 			
 			newWhiteKey.append(newWhiteNote);
 			pianoElts[pianoIndex[h]].append(newWhiteKey);
