@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF22;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  /* transform: scaleY(1.2) skewX(-10deg); */
+  font-size: 10px;
+}
