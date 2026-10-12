@@ -1,5 +1,4 @@
 .piano {
-	counter-reset: white-key black-key;
 	resize: both;
 	display: grid;
 	grid-template-columns: repeat(21, 1fr);
@@ -11,6 +10,19 @@
 .piano div {
 	border-radius: 0 0 1rem 1rem;
 	margin: 0.125rem;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.note-name {
+	color:grey;
+	padding-bottom: 0.75rem;
+	user-select: none;
+}
+
+.black .note-name {
+	font-size: 0.75rem;
 }
 
 .black {
@@ -20,10 +32,18 @@
 	z-index: 10;
 }
 
+.black:active {
+	box-shadow: inset 0px 5px 0px 0px #FFFFFF22;
+}
+
 .white {
 	background-color: #FFFFFF;
+	box-shadow: inset 0px -10px 0px 0px #00000022;
 	grid-row: 1 / 10;
-	counter-increment: white-key;
+}
+
+.white:active {
+	box-shadow: none;
 }
 
 .container {
