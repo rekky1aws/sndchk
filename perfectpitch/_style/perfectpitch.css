@@ -1,7 +1,6 @@
 .piano {
 	counter-reset: white-key black-key;
 	resize: both;
-	border: 1px solid black;
 	display: grid;
 	grid-template-columns: repeat(21, 1fr);
 	grid-template-rows: repeat(9, 1fr);
@@ -10,18 +9,19 @@
 }
 
 .piano div {
-	border: 1px solid black;
+	border-radius: 0 0 1rem 1rem;
+	margin: 0.125rem;
 }
 
 .black {
-	background-color: black;
+	background-color: #000000;
 	grid-row: 1 / 6;
 	counter-increment: black-key;
 	z-index: 10;
 }
 
 .white {
-	background-color: white;
+	background-color: #FFFFFF;
 	grid-row: 1 / 10;
 	counter-increment: white-key;
 }
