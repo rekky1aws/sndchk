@@ -7,6 +7,8 @@ header {
 
 h1 {
   font-family: "Oswald", sans-serif;
+  letter-spacing: 0.001rem;
+  line-height: 1.1;
   font-weight: 700;
   transform: perspective(360px) rotateX(10deg);
   font-size: 10px;
