@@ -1,8 +1,9 @@
 # TODO
 
 ## Perfect pitch
- + Fonction pour générer un bruit (utiliser Tone.js ? ou tout refaire manuellement avec l'AudioAPI ?)
- + Relier correctement chaque note jouée à chaque element correspondant (eventListener dans la fonction de création des piano);
+ + Faire en sorte de démarrer le son au début de l'appui et l'arreter a la fin (et pas après 0.1 sec comme maintenant)
+ + Trouver comment avoir une très légère attack et release sur la gate du son pour evite que ca clique
+
  + Relier les notes au clavier de l'utilisateur
   + KeyCode
   + MIDI
