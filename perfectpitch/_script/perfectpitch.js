@@ -5,6 +5,10 @@ const startingOctave = 2;
 // VARIABLES
 
 // FUNCTIONS
+function playNote (evt) {
+	console.log(evt.target.textContent);
+}
+
 function generatePianos () {
 	const pianoElts = document.querySelectorAll('.piano');
 	const pianoIndex = Object.keys(pianoElts);
@@ -18,8 +22,11 @@ function generatePianos () {
 			newWhiteKey.classList.add('white');
 			newWhiteKey.style.gridColumn = `${1+(3*i)} / ${4+(3*i)}`;
 			newWhiteNote.classList.add('note-name');
+			
 			newWhiteNote.textContent = `${String.fromCharCode(65+((i+2)%7))}${startingOctave+h}`; // for Example "C3"
 			
+			newWhiteKey.addEventListener('click', playNote,);
+
 			newWhiteKey.append(newWhiteNote);
 			pianoElts[pianoIndex[h]].append(newWhiteKey);
 
@@ -31,7 +38,9 @@ function generatePianos () {
 				newBlackKey.classList.add('black');
 				newBlackKey.style.gridColumn = `${3+(3*i)} / ${5+(3*i)}`;
 				newBlackNote.classList.add('note-name');
-				newBlackNote.textContent = `${String.fromCharCode(65+((i+2)%7))}#${startingOctave+h}`
+				newBlackNote.textContent = `${String.fromCharCode(65+((i+2)%7))}#${startingOctave+h}`;
+
+				newBlackKey.addEventListener('click', playNote);
 				
 				newBlackKey.append(newBlackNote);
 				pianoElts[pianoIndex[h]].append(newBlackKey);
